@@ -1,0 +1,24 @@
+{
+  "name": "component",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/Component.js",
+  "scripts": {
+    "start": "npm run webpack & npm run serve",
+    "webpack": "cd example && ../node_modules/.bin/webpack -w",
+    "serve": "cd example && python -m SimpleHTTPServer",
+    "test": "node_modules/.bin/mocha __tests__ --recursive --compilers jsx?:babel/register",
+    "build": "node_modules/.bin/webpack"
+  },
+  "author": "Jack Callister",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.9",
+    "babel-loader": "^5.3.2",
+    "cheerio": "^0.19.0",
+    "mocha": "^2.2.5",
+    "react": "^0.13.2",
+    "webpack": "^1.10.5"
+  }
+}
