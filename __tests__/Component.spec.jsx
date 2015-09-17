@@ -1,14 +1,35 @@
-import React from 'react'
+import React from 'react/addons'
 import assert from 'assert'
-import cheerio from 'cheerio'
+import sinon from 'sinon'
+import createComponent, { tagSelector } from '../src/createComponent'
 import Component from '../src/Component'
+
+const TestUtils = React.addons.TestUtils
+const renderer = TestUtils.createRenderer()
 
 describe('Component', () => {
   it('should render', () => {
-    const string = React.renderToStaticMarkup(<Component />)
-    const $ = cheerio.load(string)
-    const componentDOM = $('h1')
+    const comp = createComponent(<Component />)
 
-    assert.equal('<h1>Hello, World</h1>', $.html())
+    const h1 = tagSelector(comp, 'h1')
+
+    console.log(h1)
+
+    // const callback = sinon.spy()
+    // const component = createComponent(<Component func={callback}/>)
+
+    // component.findByQuery('h1')[0].onClick()
+
+    // assert.equal(true, callback.called)
   })
+
+  // it('should render', () => {
+  //   const callback = sinon.spy()
+  //   const component = createComponent(<Component func={callback}/>)
+  //   const element = querySelector(component, 'h1')
+  //
+  //   simulateClick(element)
+  //
+  //   assert.equal(true, callback.called)
+  // })
 })
