@@ -1,5 +1,5 @@
 {
-  "name": "component",
+  "name": "react-testing-kit",
   "version": "0.0.1",
   "description": "",
   "main": "dist/Component.js",
@@ -16,10 +16,9 @@
     "babel": "^5.8.21",
     "babel-core": "^5.8.9",
     "babel-loader": "^5.3.2",
-    "cheerio": "^0.19.0",
     "mocha": "^2.2.5",
     "react": "^0.13.2",
-    "react-unit": "^1.0.5",
+    "react-test-unit": "0.0.1-alpha3",
     "sinon": "^1.16.1",
     "webpack": "^1.10.5"
   }

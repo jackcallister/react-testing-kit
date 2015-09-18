@@ -1,4 +1,2 @@
-import React from 'react';
-import Component from '../../src/Component';
+import React from 'react'
 
-React.render(<Component />, document.getElementById('app'));
