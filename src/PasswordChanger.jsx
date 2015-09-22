@@ -46,7 +46,7 @@ export default class PasswordChanger {
 
     return (
       <form>
-        <h3>Change Password</h3>
+        <h3 className='heading'>Change Password</h3>
 
         <input type='password'
                value={this.props.newPassword}

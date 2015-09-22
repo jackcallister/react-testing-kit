@@ -16,6 +16,15 @@ describe('PasswordChanger', () => {
     disabled: false
   }
 
+  context('with default props', () => {
+    const passwordChangerComponent = renderComponent(<PasswordChanger {...defaultProps} />)
+    const h1 = querySelector(passwordChangerComponent, '.heading')
+
+    it('should have a heading', () => {
+      assert.equal('Change Password', h1.props.children)
+    })
+  })
+
   context('while enabled', () => {
     const passwordChangerComponent = renderComponent(<PasswordChanger {...defaultProps} />)
     const button = querySelector(passwordChangerComponent, 'button')
